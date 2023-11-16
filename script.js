@@ -6,10 +6,17 @@ const divide = (arr, n) => {
 	let result=[];
 	let currsum=0;
 	for(let i=0; i<arr.length; i++){
-		if(currsum+arr[i]<=n){
+		 if(currsum+arr[i]<=n){
+			if(currsum==n && arr[i]==0){
+				result.push([...currsub]);
+				currsub=[arr[i]];
+				currsum=arr[i];
+			}else{
 			currsub.push(arr[i]);
 			currsum+=arr[i];
-		}else{
+				}
+		}
+		else{
 			result.push([...currsub]);
 			currsub=[arr[i]];
 			currsum=arr[i];
